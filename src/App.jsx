@@ -13,18 +13,6 @@ function App() {
   const [albums, setAlbums] = useState([])
   const [loading, setLoading] = useState(false);
 
-
-  /*   var authOptions = {
-      url: 'https://accounts.spotify.com/api/token',
-      headers: {
-        'Authorization': 'Basic ' + (new Buffer.from(client_id + ':' + client_secret).toString('base64'))
-      },
-      form: {
-        grant_type: 'client_credentials'
-      },
-      json: true
-    }; */
-
   const spotifyAuth = () => {
     var authParameters = {
       method: 'POST',
@@ -69,7 +57,6 @@ function App() {
     setLoading(false);
   }
 
-  console.log(albums)
 
 
   const handleSearch = () => {
