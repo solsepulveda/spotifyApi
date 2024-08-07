@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-
+import Spinner from 'react-bootstrap/Spinner'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 var CLIENT_ID = '28bac99753f8459fa9b3cb4c0c1fdd03';
@@ -86,7 +87,7 @@ function App() {
             handleSearch();
           }
         }} />
-     
+      {loading && <Spinner animation="border" variant='dark'style={{marginLeft:'20px'}} />}
       </div>
       <div className='filas'>
         {albums.map((album, i) => {
